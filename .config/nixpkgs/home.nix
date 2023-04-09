@@ -32,5 +32,6 @@
 
   home.packages = with pkgs; [
     nodejs
+    tmux
   ];
 }
