@@ -18,4 +18,15 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # Manage Bash
+  programs.bash = {
+    enable = true;
+    bashrcExtra = ''
+      . ~/.bashrc.old
+    '';
+    profileExtra = ''
+      . ~/.profile.old
+    '';
+  };
 }
