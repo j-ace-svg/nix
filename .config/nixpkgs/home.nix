@@ -29,4 +29,8 @@
       . ~/.profile.old
     '';
   };
+
+  home.packages = with pkgs; [
+    nodejs
+  ];
 }
