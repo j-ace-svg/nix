@@ -52,5 +52,8 @@ in {
     # Regular packages
     pkgs.nodejs
     pkgs.tmux
+
+    # Packages with nixGL wrapper
+    (nixGLWrap pkgs.qutebrowser)
   ];
 }
