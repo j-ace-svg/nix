@@ -33,5 +33,6 @@
     # Regular packages
     pkgs.nodejs
     pkgs.tmux
+    pkgs.yt-dlp
   ];
 }
