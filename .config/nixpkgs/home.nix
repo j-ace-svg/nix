@@ -31,6 +31,7 @@
 
   home.packages = [
     # Regular packages
+    pkgs.neovim
     pkgs.nodejs
     pkgs.tmux
     pkgs.yt-dlp
