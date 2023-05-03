@@ -1,20 +1,5 @@
 { config, pkgs, ... }:
-
-let
-  # ...
-  nixgl = import <nixgl> {} ;
-  nixGLWrap = pkg: pkgs.runCommand "${pkg.name}-nixgl-wrapper" {} ''
-    mkdir $out
-    ln -s ${pkg}/* $out
-    rm $out/bin
-    mkdir $out/bin
-    for bin in ${pkg}/bin/*; do
-      wrapped_bin=$out/bin/$(basename $bin)
-      echo "exec ${lib.getExe nixgl.auto.nixGLDefault} $bin \$@" > $wrapped_bin
-      chmod +x $wrapped_bin
-    done
-  '';
-in {
+{
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "j-ace-svg";
@@ -46,14 +31,8 @@ in {
   };
 
   home.packages = [
-    # nixGL for OpenGL applications
-    nixgl.auto.nixGLDefault
-
     # Regular packages
     pkgs.nodejs
     pkgs.tmux
-
-    # Packages with nixGL wrapper
-    (nixGLWrap pkgs.qutebrowser)
   ];
 }
