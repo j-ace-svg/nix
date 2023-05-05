@@ -30,10 +30,12 @@
   };
 
   home.packages = [
-    # Regular packages
-    pkgs.neovim
+    # Libraries
     pkgs.nodejs
-    pkgs.tmux
     pkgs.yt-dlp
+
+    # Tui apps
+    pkgs.neovim
+    pkgs.tmux
   ];
 }
