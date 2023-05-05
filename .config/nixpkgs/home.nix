@@ -37,5 +37,6 @@
     # Tui apps
     pkgs.neovim
     pkgs.tmux
+    pkgs.vifm
   ];
 }
