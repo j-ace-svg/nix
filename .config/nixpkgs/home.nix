@@ -34,9 +34,13 @@
     pkgs.nodejs
     pkgs.yt-dlp
 
+    # Node packages
+    pkgs.nodePackages.readability-cli
+
     # Tui apps
     pkgs.neovim
     pkgs.tmux
     pkgs.vifm
+    pkgs.newsboat
   ];
 }
